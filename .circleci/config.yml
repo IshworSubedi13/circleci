@@ -3,17 +3,15 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: cimg/python:3.10  # Official CircleCI Python image
+      - image: cimg/python:3.10
     steps:
-      - checkout  # Pulls your repo code
-
+      - checkout
       - run:
           name: Install dependencies
           command: pip install -r requirements.txt
-
       - run:
           name: Run tests
-          command: pytest  # or python -m unittest
+          command: pytest tests/
 
 workflows:
   version: 2
