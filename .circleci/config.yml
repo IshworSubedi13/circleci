@@ -10,6 +10,11 @@ jobs:
           name: Install dependencies
           command: pip install -r requirements.txt
       - run:
+          name: List test files
+          command: |
+            echo "Listing files in tests/ directory:"
+            ls -al tests/
+      - run:
           name: Run tests
           command: pytest tests/
 
