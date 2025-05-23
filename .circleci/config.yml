@@ -10,7 +10,7 @@ jobs:
           command: pip install -r requirements.txt
       - run:
           name: Run pytest on tests directory
-          command: pytest -v tests/
+          command: pytest
 workflows:
   version: 2
   test-workflow:
